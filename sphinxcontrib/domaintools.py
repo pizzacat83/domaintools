@@ -107,7 +107,7 @@ class CustomDomain(Domain):
     def clear_doc(self, docname):
       if 'objects' in self.data:
        
-        for key, (fn, _) in self.data['objects'].items():
+        for key, (fn, _) in list(self.data['objects'].items()):
             if fn == docname:
                 del self.data['objects'][key]
 
