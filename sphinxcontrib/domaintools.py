@@ -76,7 +76,7 @@ class GenericObject(ObjectDescription):
                 indextype = 'single'
                 indexentry = self.indextemplate % (name,)
             self.indexnode['entries'].append((indextype, indexentry,
-                                              targetname, ''))
+                                              targetname, targetname, ''))
         self.env.domaindata[self.domain]['objects'][self.objtype, name] = \
             self.env.docname, targetname
 
@@ -126,7 +126,7 @@ class CustomDomain(Domain):
                             labelid, contnode)
 
     def get_objects(self):
-        for (type, name), info in self.data['objects'].iteritems():
+        for (type, name), info in self.data['objects'].items():
             yield (name, name, type, info[0], info[1],
                    self.object_types[type].attrs['searchprio'])
 

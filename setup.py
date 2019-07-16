@@ -10,7 +10,7 @@ This package contains tools for easy sphinx domain creation.
 sys.path.insert(0, 'sphinxcontrib')
 import domaintools
 
-requires = ['Sphinx>=1.0']
+requires = ['Sphinx>=1.4']
 
 setup(
     name='sphinxcontrib-domaintools',
